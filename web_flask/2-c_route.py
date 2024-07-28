@@ -18,9 +18,10 @@ def hbnb():
     return "HBNB"
 
 
-@app.route('/c/<text>', strict_slashes=False)
-@def textt(text):
-     return f"C {text.replace('_', ' ')}"
+@app.route("/c/<text>", strict_slashes=False)
+def cisfun(text):
+    """displays C followed by a formated text value"""
+    return 'C ' + text.replace('_', ' ')
 
 
 if __name__ == '__main__':
